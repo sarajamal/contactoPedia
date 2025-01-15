@@ -37,7 +37,7 @@ response =  this.props.handleAddContact({
     }
 
  
-   if (response.status =="success"){
+   if (response.status ==="success"){
     this.setState({errorMessage:undefined,successMessage:response.msg})
     document.querySelector(".contact-form").reset();
    }

@@ -82,7 +82,7 @@ class ContactIndex extends React.Component{
            
             this.setState((prevState) => ({
                 contactList:prevState.contactList.map((obj)=>{
-                    if(obj.id==updatedContact.id){
+                    if(obj.id===updatedContact.id){
                         return{
                           ...obj,
                           name:updatedContact.name,
@@ -103,7 +103,7 @@ handleToggleFavorite = (contact)=>{
 this.setState((prevState) =>{
     return {
         contactList : prevState.contactList.map((obj) =>{
-            if(obj.id == contact.id){
+            if(obj.id === contact.id){
                 return { ...obj , isFavoriteList: !obj.isFavoriteList}
                
                 }
